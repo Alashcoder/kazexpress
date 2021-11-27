@@ -15,6 +15,6 @@ RUN git clone https://github.com/Alashcoder/kazexpress.git
 RUN pip3 install django
 RUN pip3 install virtualenv
 RUN pip3 install pillow
-
+RUN /home/whiterose/programing/python/django/kazexpress/manage.py runserver
 ENTRYPOINT ["jupyter","notebook","--ip=*","--allow-root"]
 
