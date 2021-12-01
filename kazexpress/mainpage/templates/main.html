@@ -89,8 +89,16 @@
 
 		</div>
 		<div clas="main container-fluid">
+		{% for i in product %}
+				<div>
+				<img   src="{{i.photo_prod.url}}" alt="" > 
+				{{i.description}}
+				</div>
+				{%endfor %}
+		
 		<ul class="list-unstyled">
 			<li><div class="card_bar col-xs-12 col-sm-6 col-md-12">
+			
 				<div class="card">
 					<img src="images/turan_water.jpeg" alt="turan_water" style="width:100%">
 					<h1>Turan 5L</h1>

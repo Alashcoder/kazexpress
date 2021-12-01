@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template.context import RequestContext
-def index(reqest):
+from .models import Product
+def index(request):
 #    context_instance=RequestContext(request)
-    return render(reqest,"main.html")
-    
+    return render(request,"main.html",{'product':product})
+product=Product.objects.all()
+def prod(request):
+    return render(request,"product_page.html",{'product':product})
 # Create your views here.

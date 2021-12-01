@@ -1,0 +1,3 @@
+CREATE USER admin WITH PASSWORD 'devpass';
+CREATE DATABASE kazexess;
+GRANT ALL PRIVILEGES ON DATABASE products TO admin;

@@ -85,9 +85,13 @@
 				</div>
 		<div clas="main">
 			<div class="g"><div style="display: flex;">
+			{% for i in product %}
 				<div>
-				<img   src="images/aralash-shoro.png" alt="dgd" ></div>
-				<div>Аралаш не только вкусный, но и полезный напиток!<br>
+				<img   src="i.photo_prod.url" alt="dgd" > 
+				{{i.description}}
+				</div>
+				{%endfor %}
+				{% comment %} <div>Аралаш не только вкусный, но и полезный напиток!<br>
 
 ✅ Стимулирует обменные процессы,<br>
 ✅ Улучшает усвоение и переваривание пищи,<br>
@@ -96,7 +100,7 @@
 ✅ Дарит отличное настроение!<br>
 
 Ну и наконец, Аралаш – это формула, проверенная веками. Нет ничего лучше напитков, качество и вкус которых знакомы не одному поколению, согласны? </div></div>
-				<div class="card">Цена:500тг/1шт
+			{% endcomment %}	<div class="card">Цена:500тг/1шт 
 					<p><button onclick="alert('товар в корзине')">Добавить в корзину</button></p></div>
 			  </div> 
 		</div></div>

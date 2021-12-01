@@ -9,12 +9,12 @@ RUN apt-get install -y git
 RUN apt-get install -y python3
 RUN apt-get install -y python3-pip
 RUN apt-get install -y  jupyter
+RUN apt-get install postgresql
+RUN apt-get install nginx
 RUN git clone https://github.com/Alashcoder/kazexpress.git
-
-
-RUN pip3 install django
 RUN pip3 install virtualenv
-RUN pip3 install pillow
-RUN /home/whiterose/programing/python/django/kazexpress/manage.py runserver
-ENTRYPOINT ["jupyter","notebook","--ip=*","--allow-root"]
+WORKDIR  /home/whiterose/programing/python/django/kazexpress
+RUN chmod +x entry-point.sh 
+RUN pip3 install -r requirements.txt    
+ENTRYPOINT ["./entry-point.sh"]
 
